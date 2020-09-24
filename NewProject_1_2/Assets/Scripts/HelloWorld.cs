@@ -7,7 +7,7 @@ public class HelloWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bool isAlive = false;
+        //bool isAlive = false;
         int playerHealth = -10;
         if (playerHealth > 10)
         {

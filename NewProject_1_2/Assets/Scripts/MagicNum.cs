@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagicNum : MonoBehaviour
 {
+    public Text title;
 
     public int min;
     public int max;
@@ -11,10 +13,12 @@ public class MagicNum : MonoBehaviour
 
     void Start()
     {
-        //min = 1;
-        //max = 1000;
-        print("Закадайте число от 1 до " + max);
+        //работа в сцене Текст 
+        title.text = "magic Numbers";
+        title.color = Color.red;
+        title.fontSize = 12;
 
+        print("Закадайте число от 1 до " + max);
         UpdateGuess();
     }
 
