@@ -18,6 +18,9 @@ public class MegicNumbers : MonoBehaviour
 
     void Start()
     {
+        min = 1;
+        max = 1000;
+        ct = 0;
 
         title.text = "magic numbers";
         title.text = "Загадай число от " + min + " до " + max;
@@ -54,9 +57,7 @@ public class MegicNumbers : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            min = 1;
-            max = 1000;
-            ct = 0;
+            
             Start();
         }
 
