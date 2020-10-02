@@ -7,9 +7,8 @@ public class Step : MonoBehaviour
     [TextArea(10, 15)]
     public string stepContent;
 
-    public Step[] newxtSteps;
-
- 
+    public Step[] nextSteps;
+    
 
     
 
