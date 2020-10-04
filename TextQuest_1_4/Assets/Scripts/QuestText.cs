@@ -4,6 +4,7 @@ using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class QuestText : MonoBehaviour
 {
     public Text titleText;
@@ -12,13 +13,14 @@ public class QuestText : MonoBehaviour
     public Step startStep;
     public Step currentStep;
 
+    [Header("Image")]
+    public Image image;
+
     string race;
     string classPlayer;
 
     int ct;
-    
 
-    
 
     void Start()
     {
@@ -29,7 +31,8 @@ public class QuestText : MonoBehaviour
 
         currentStep = startStep;
         contentText.text = startStep.stepContent;
- 
+       
+       
     }
 
     void Update()
@@ -37,62 +40,52 @@ public class QuestText : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             //Scens1();
-            ct++;
+            
             currentStep = currentStep.nextSteps[0];
             contentText.text = currentStep.stepContent;
-            if(ct == 2)
-            {
-                race =  currentStep.name;
-            }
-            if(ct ==3)
-            {
-                classPlayer = currentStep.name;
-            }
-
-            titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
+            GetCount();
+            
         }
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             //Scens2();
-            ct++;
+
             currentStep = currentStep.nextSteps[1];
             contentText.text = currentStep.stepContent;
-            if (ct == 2)
-            {
-                race = currentStep.name;
-            }
-            if (ct == 3)
-            {
-                classPlayer = currentStep.name;
-            }
-
-            titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
+            GetCount();
         }
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             //Scens3();
-            ct++;
             currentStep = currentStep.nextSteps[2];
-            //currentStep = currentStep.startPlayer[2];
             contentText.text = currentStep.stepContent;
-            if (ct == 2)
-            {
-                race = currentStep.name;
-            }
-            if (ct == 3)
-            {
-                classPlayer = currentStep.name;
-            }
-
-            titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
+            GetCount();
         }
-    
-        if(Input.GetKeyDown(KeyCode.Space))
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-           
+
             Start();
         }
     }
+
+
+
+    public void GetCount()
+    {
+        ct++;
+        if (ct == 2)
+        {
+            race = currentStep.name;
+        }
+        if (ct == 3)
+        {
+            classPlayer = currentStep.name;
+        }
+        titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
+        image.sprite = currentStep.nextSpriteImage;
+    }
+
 
     //public void Scens1()
     //{

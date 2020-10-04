@@ -8,6 +8,7 @@ public class Step : MonoBehaviour
     public string stepContent;
 
     public Step[] nextSteps;
+    public Sprite nextSpriteImage;
     
 
     
