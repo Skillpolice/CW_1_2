@@ -9,8 +9,9 @@ public class Step : MonoBehaviour
 
     public Step[] nextSteps;
     public Sprite nextSpriteImage;
-    
+    public Sprite nextSpriteImageText;
 
-    
+
+
 
 }

@@ -14,7 +14,8 @@ public class QuestText : MonoBehaviour
     public Step currentStep;
 
     [Header("Image")]
-    public Image image;
+    public Image backgroundImage;
+    public Image textImage;
 
     string race;
     string classPlayer;
@@ -31,8 +32,8 @@ public class QuestText : MonoBehaviour
 
         currentStep = startStep;
         contentText.text = startStep.stepContent;
-       
-       
+        textImage.sprite = currentStep.nextSpriteImageText;
+        backgroundImage.sprite = currentStep.nextSpriteImage;
     }
 
     void Update()
@@ -43,8 +44,11 @@ public class QuestText : MonoBehaviour
             
             currentStep = currentStep.nextSteps[0];
             contentText.text = currentStep.stepContent;
+            backgroundImage.sprite = currentStep.nextSpriteImage;
+            textImage.sprite = currentStep.nextSpriteImage;
             GetCount();
-            image.sprite = currentStep.nextSpriteImage;
+           
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
@@ -52,21 +56,23 @@ public class QuestText : MonoBehaviour
 
             currentStep = currentStep.nextSteps[1];
             contentText.text = currentStep.stepContent;
+            backgroundImage.sprite = currentStep.nextSpriteImage;
+            textImage.sprite = currentStep.nextSpriteImageText;
             GetCount();
-            image.sprite = currentStep.nextSpriteImage;
+            
         }
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
             //Scens3();
             currentStep = currentStep.nextSteps[2];
             contentText.text = currentStep.stepContent;
+            backgroundImage.sprite = currentStep.nextSpriteImage;
+            textImage.sprite = currentStep.nextSpriteImageText;
             GetCount();
-            image.sprite = currentStep.nextSpriteImage;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             Start();
         }
     }
@@ -84,7 +90,7 @@ public class QuestText : MonoBehaviour
         {
             classPlayer = currentStep.name;
         }
-        titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
+        titleText.text = "Ваш персонаж: " + "Класс- " + race + "|| Раса- " + classPlayer;
        
     }
 
