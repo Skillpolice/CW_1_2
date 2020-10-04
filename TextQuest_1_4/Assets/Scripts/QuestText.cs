@@ -44,7 +44,7 @@ public class QuestText : MonoBehaviour
             currentStep = currentStep.nextSteps[0];
             contentText.text = currentStep.stepContent;
             GetCount();
-            
+            image.sprite = currentStep.nextSpriteImage;
         }
         if (Input.GetKeyDown(KeyCode.Keypad2))
         {
@@ -53,6 +53,7 @@ public class QuestText : MonoBehaviour
             currentStep = currentStep.nextSteps[1];
             contentText.text = currentStep.stepContent;
             GetCount();
+            image.sprite = currentStep.nextSpriteImage;
         }
         if (Input.GetKeyDown(KeyCode.Keypad3))
         {
@@ -60,6 +61,7 @@ public class QuestText : MonoBehaviour
             currentStep = currentStep.nextSteps[2];
             contentText.text = currentStep.stepContent;
             GetCount();
+            image.sprite = currentStep.nextSpriteImage;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -83,7 +85,7 @@ public class QuestText : MonoBehaviour
             classPlayer = currentStep.name;
         }
         titleText.text = "Ваш персонаж: " + "Класс- " + race + " Раса- " + classPlayer;
-        image.sprite = currentStep.nextSpriteImage;
+       
     }
 
 
