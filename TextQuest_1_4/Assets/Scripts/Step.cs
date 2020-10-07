@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Step : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Step : MonoBehaviour
     public Step[] nextSteps;
     public Sprite nextSpriteImage;
     public Sprite nextSpriteImageText;
+
 
 
 
