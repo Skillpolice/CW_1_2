@@ -168,7 +168,7 @@ MonoBehaviour:
     !!!!\n\n1.\u041D\u0430\u0437\u0430\u0434"
   nextSteps:
   - {fileID: 425812904}
-  nextSpriteImage: {fileID: 0}
+  nextSpriteImage: {fileID: 21300000, guid: d2e74841f8fd71b4c83ffefcdb5bda22, type: 3}
   nextSpriteImageText: {fileID: 0}
 --- !u!1 &80669253
 GameObject:
@@ -585,7 +585,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepContent: "\u0421\u0442\u0430\u043B\u0430 \u0434\u043E\u0441\u043F\u0443\u0442\u043D\u0430
-    \u043A\u0430\u0440\u0442\u0430 \u041F\u043B\u0430\u043D\u0435\u0442. \n\n\u041F\u043B\u0430\u043D\u0435\u0442\u044B:\n\n1.\u0421\u0442\u0440\u0430\u043D\u0438\u043A
+    \u043A\u0430\u0440\u0442\u0430 \u041F\u043B\u0430\u043D\u0435\u0442. \u0421\u0442\u0430\u0440\u0442\u043E\u0432\u0430\u044F
+    \u043B\u043E\u043A\u0430\u0446\u0438\u044F \u0441\u0442\u0440\u0430\u043D\u043D\u0438\u043A,
+    \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u043C\u0441\u044F \u0442\u0443\u0434\u0430!)\n\n\u041F\u043B\u0430\u043D\u0435\u0442\u044B:\n\n1.\u0421\u0442\u0440\u0430\u043D\u0438\u043A
     \n2.\u0412\u043E\u0437\u0434\u0443\u0448\u0430\u044F \u043C\u0435\u0440\u0442\u0432\u0430\u044F
     \u0437\u043E\u043D\u0430 - (\u0417\u0435\u043C\u043B\u044F)\n3.\u041B\u0443\u043D\u0430\n4.\u0422\u0438\u0442\u0430\u043D\n5.\u0418\u041E"
   nextSteps:
@@ -1042,7 +1044,7 @@ MonoBehaviour:
     !!!!\n\n1.\u041D\u0430\u0437\u0430\u0434"
   nextSteps:
   - {fileID: 425812904}
-  nextSpriteImage: {fileID: 0}
+  nextSpriteImage: {fileID: 21300000, guid: 3fd47de5e170fca4695d51731b662fde, type: 3}
   nextSpriteImageText: {fileID: 0}
 --- !u!1 &805024004
 GameObject:
@@ -1336,7 +1338,7 @@ MonoBehaviour:
     !!!!\n\n1.\u041D\u0430\u0437\u0430\u0434"
   nextSteps:
   - {fileID: 425812904}
-  nextSpriteImage: {fileID: 0}
+  nextSpriteImage: {fileID: 21300000, guid: 04218e1e22bd08646b1b1684b7698f2b, type: 3}
   nextSpriteImageText: {fileID: 0}
 --- !u!1 &1166126451
 GameObject:
