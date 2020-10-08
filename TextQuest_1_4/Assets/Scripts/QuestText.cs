@@ -11,6 +11,7 @@ public class QuestText : MonoBehaviour
     public Text titleText;
     public Text contentText;
 
+    [Header("Steps")]
     public Step startStep;
     public Step currentStep;
 
@@ -48,40 +49,28 @@ public class QuestText : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currentStep = currentStep.nextSteps[0];
-            MetodElements();
-            //Scens1();
+            CheckNumber(0);
         }
         if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.Alpha2))
         {
             //Scens2();
-            currentStep = currentStep.nextSteps[1];
-            MetodElements();
-
+            CheckNumber(1);
         }
         if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.Alpha3))
         {
-            //Scens3();
-            currentStep = currentStep.nextSteps[2];
-            MetodElements();
+            CheckNumber(2);
         }
         if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
         {
-            //Scens3();
-            currentStep = currentStep.nextSteps[3];
-            MetodElements();
+            CheckNumber(3);
         }
         if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5))
         {
-            // Scens3();
-            currentStep = currentStep.nextSteps[4];
-            MetodElements();
+            CheckNumber(4);
         }
         if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.Alpha6))
         {
-            //Scens3();
-            currentStep = currentStep.nextSteps[5];
-            MetodElements();
+            CheckNumber(5);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -90,12 +79,27 @@ public class QuestText : MonoBehaviour
         }
     }
 
+    private void CheckNumber(int number) //проверка кода в Юнити на ложные нажатия клавишь
+    {
+        if (currentStep.nextSteps.Length > number)
+        {
+            if (currentStep.nextSteps[number] != null)
+            {
+                currentStep = currentStep.nextSteps[number];
+                MetodElements();
+            }
+        }
+
+
+    }
+
     private void MetodElements()
     {
-        contentText.text = currentStep.stepContent;
+        contentText.text = currentStep.stepContent; //Запоминаем на какой позиции находимся
         backgroundImage.sprite = currentStep.nextSpriteImage;
         textImage.sprite = currentStep.nextSpriteImageText;
 
+        //счетчик класса
         ct++;
         if (ct == 2)
         {
@@ -107,7 +111,6 @@ public class QuestText : MonoBehaviour
         }
         titleText.text = "Ваш персонаж: " + "Класс- " + race + " || Раса- " + classPlayer;
 
-       // GetCount();
     }
 
     //public void Scens1()
@@ -116,17 +119,6 @@ public class QuestText : MonoBehaviour
     //    contentText.text = currentStep.stepContent;
     //    backgroundImage.sprite = currentStep.nextSpriteImage;
     //    textImage.sprite = currentStep.nextSpriteImageText;
-
-    //    ct++;
-    //    if (ct == 2)
-    //    {
-    //        race = currentStep.name;
-    //    }
-    //    if (ct == 3)
-    //    {
-    //        classPlayer = currentStep.name;
-    //    }
-    //    titleText.text = "Ваш персонаж: " + "Класс- " + race + " || Раса- " + classPlayer;
 
     //}
     //public void Scens2()
